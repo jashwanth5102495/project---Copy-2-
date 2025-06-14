@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --crimson: #8B0000;
+  --emerald: #006400;
+  --sapphire: #191970;
+  --gold: #D4AF37;
+  --silver: #C0C0C0;
+  --background: #18181b;
+  --foreground: #23232a;
+  --card: #23232a;
+  --text: #f3f3f3;
+  --muted: #a1a1aa;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #23232a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4a030;
+}
+
+/* Animation for Steam Effect */
+@keyframes steam {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-20px) translateX(10px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-steam {
+  animation: steam 3s ease-out infinite;
+}
+
+/* Hover animations for product cards */
+.product-card-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card-hover:hover {
+  transform: translateY(-8px);
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
